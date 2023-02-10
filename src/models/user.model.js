@@ -20,7 +20,6 @@ if(err) {
   result(err, null);
 }
 else{
-  console.log(res.insertId);
   result(null, res.insertId);
 }
 });
@@ -43,7 +42,6 @@ if(err) {
   result(null, err);
 }
 else{
-  console.log('users : ', res);
   result(null, res);
 }
 });
