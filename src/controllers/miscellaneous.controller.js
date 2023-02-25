@@ -3,6 +3,7 @@ const EducationLevels = require('../models/miscellaneous/education-levels.model'
 const EducationCountries = require('../models/miscellaneous/education-countries.model');
 const Certifications = require('../models/miscellaneous/certifications.model');
 const Professions = require('../models/miscellaneous/professions.model');
+const Specialities = require('../models/miscellaneous/specialities.model');
 exports.getEducationLevels = (req,res)=>{
   EducationLevels.findAll((err, educationLevels)=> {
     if (err)
@@ -29,5 +30,12 @@ exports.getProfessions = (req,res)=>{
     if (err)
     res.send(err);
     res.send(professions);
+  });
+}
+exports.getSpecialities = (req,res)=>{
+  Specialities.findAll((err, specialities)=> {
+    if (err)
+    res.send(err);
+    res.send(specialities);
   });
 }
