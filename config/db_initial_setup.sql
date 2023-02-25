@@ -154,3 +154,37 @@ INSERT INTO `gabay_db`.`educationCountries` (`name`) VALUES
 ('Wiltshire'),
 ('Worcestershire'),
 ('Wrexham');
+
+CREATE TABLE IF NOT EXISTS `certifications` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `gabay_db`.`certifications` (`name`) VALUES
+('BLS'),
+('BCLS'),
+('ALS'),
+('ACLS'),
+('CCRN'),
+('CARN'),
+('PCCN'),
+('ADM'),
+('CMCN'),
+('CMCP'),
+('CGRN'),
+('COHN'),
+('CPAN'),
+('CCN'),
+('CPHRM'),
+('LNCC'),
+('ENP'),
+('FNP'),
+('GNP'),
+('PPCNP'),
+('PMHNP'),
+('AGACNP'),
+('AGPCNP'),
+('AGCNS'),
+('NNP'),
+('WHNP'),
+('CENP');
