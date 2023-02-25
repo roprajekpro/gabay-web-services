@@ -188,3 +188,24 @@ INSERT INTO `gabay_db`.`certifications` (`name`) VALUES
 ('NNP'),
 ('WHNP'),
 ('CENP');
+
+CREATE TABLE IF NOT EXISTS `professions` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `gabay_db`.`professions` (`name`) VALUES 
+('Registered Nurse'),
+('Licensed Practical Nurse'),
+('Certified Nursing Assistant'),
+('Allied Health'),
+('Nurse Practitioner'),
+('Clinical Nurse Specialist'),
+('Management/Director/Executive'),
+('Certified Occupational Therapist Assistant'),
+('Occupational Therapist'),
+('Physical Therapist'),
+('Physical Therapist Assistant'),
+('Speech Language Pathologist'),
+('Speech Language Pathologist Assistant'),
+('Other');

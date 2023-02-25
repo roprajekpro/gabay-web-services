@@ -4,4 +4,5 @@ const miscellaneousController =   require('../controllers/miscellaneous.controll
 router.get('/education-levels', miscellaneousController.getEducationLevels);
 router.get('/education-countries', miscellaneousController.getEducationCountries);
 router.get('/certifications', miscellaneousController.getCertifications);
+router.get('/professions', miscellaneousController.getProfessions);
 module.exports = router
