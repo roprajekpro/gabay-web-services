@@ -6,4 +6,5 @@ router.get('/education-countries', miscellaneousController.getEducationCountries
 router.get('/certifications', miscellaneousController.getCertifications);
 router.get('/professions', miscellaneousController.getProfessions);
 router.get('/specialities', miscellaneousController.getSpecialities);
+router.get('/employment-types', miscellaneousController.getEmploymentTypes);
 module.exports = router
