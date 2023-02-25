@@ -3,4 +3,5 @@ const router = express.Router()
 const miscellaneousController =   require('../controllers/miscellaneous.controller');
 router.get('/education-levels', miscellaneousController.getEducationLevels);
 router.get('/education-countries', miscellaneousController.getEducationCountries);
+router.get('/certifications', miscellaneousController.getCertifications);
 module.exports = router
