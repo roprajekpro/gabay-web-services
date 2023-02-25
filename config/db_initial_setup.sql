@@ -263,3 +263,13 @@ INSERT INTO `gabay_db`.`specialities` (`name`) VALUES
 ('Transplant'),
 ('Wound Care'),
 ('Other');
+
+CREATE TABLE IF NOT EXISTS `employmenttypes` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `gabay_db`.`employmenttypes` (`name`) VALUES 
+('Travel/Contract'),
+('Permanent'),
+('Per Diem')
