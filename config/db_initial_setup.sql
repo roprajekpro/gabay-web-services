@@ -331,3 +331,13 @@ INSERT INTO `gabay_db`.`licenses` (`name`) VALUES
 ('West Virginia'),
 ('Wisconsin'),
 ('Wyoming');
+
+CREATE TABLE IF NOT EXISTS `shifts` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `gabay_db`.`shifts` (`name`) VALUES 
+('Day'),
+('Evening'),
+('Night');
