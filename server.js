@@ -6,7 +6,7 @@ const app = express();
 // setup server port
 const port = process.env.PORT || 8888;
 const corsOptions = {
-  origin: 'http://localhost:8888',
+  origin: '*',
   optionsSuccessStatus: 200 // For legacy browser support
 }
 app.use(cors(corsOptions));
