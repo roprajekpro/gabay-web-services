@@ -332,12 +332,12 @@ INSERT INTO `gabay_db`.`licenses` (`name`) VALUES
 ('Wisconsin'),
 ('Wyoming');
 
-CREATE TABLE IF NOT EXISTS `shifts` (
+CREATE TABLE IF NOT EXISTS `travelexperiences` (
   `id` BIGINT UNSIGNED AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
-INSERT INTO `gabay_db`.`shifts` (`name`) VALUES 
-('Day'),
-('Evening'),
-('Night');
+INSERT INTO `gabay_db`.`travelexperiences` (`name`) VALUES 
+('1+ Year(s)'),
+('< 1 Year'),
+('None');
