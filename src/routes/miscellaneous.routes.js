@@ -10,4 +10,5 @@ router.get('/employment-types', miscellaneousController.getEmploymentTypes);
 router.get('/licenses', miscellaneousController.getLicenses);
 router.get('/shifts', miscellaneousController.getShifts);
 router.get('/travel-experience', miscellaneousController.getTravelExperiences);
+router.get('/hear-about-us', miscellaneousController.getHearAboutUs);
 module.exports = router
