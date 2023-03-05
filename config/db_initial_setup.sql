@@ -341,3 +341,15 @@ INSERT INTO `gabay_db`.`travelexperiences` (`name`) VALUES
 ('1+ Year(s)'),
 ('< 1 Year'),
 ('None');
+
+CREATE TABLE IF NOT EXISTS `hearAboutUs` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `gabay_db`.`hearAboutUs` (`name`) VALUES 
+('Website'),
+('Social Media'),
+('Search Engine'),
+('Friend');
+commit;
