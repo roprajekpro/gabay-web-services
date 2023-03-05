@@ -7,6 +7,7 @@ const Specialities = require('../models/miscellaneous/specialities.model');
 const EmploymentTypes = require('../models/miscellaneous/employment-types.model');
 const Licenses = require('../models/miscellaneous/licenses.model');
 const Shifts = require('../models/miscellaneous/shifts.model');
+const TravelExperiences = require('../models/miscellaneous/travel-experience.model');
 exports.getEducationLevels = (req,res)=>{
   EducationLevels.findAll((err, educationLevels)=> {
     if (err)
@@ -61,5 +62,12 @@ exports.getShifts = (req,res)=>{
     if (err)
     res.send(err);
     res.send(shifts);
+  });
+}
+exports.getTravelExperiences = (req,res)=>{
+  TravelExperiences.findAll((err, travelExperiences)=> {
+    if (err)
+    res.send(err);
+    res.send(travelExperiences);
   });
 }
