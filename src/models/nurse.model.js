@@ -14,6 +14,15 @@ let Nurse = (nurse)=>{
   this.zipcode = nurse.zipcode;
   this.created_at = new Date();
   this.updated_at = new Date();
+  this.educationLevel = nurse.educationLevel;
+  this.countryOfEducation = nurse.countryOfEducation;
+  this.certifications = nurse.certifications;
+  this.profession = nurse.profession;
+  this.speciality = nurse.speciality;
+  this.employmentType = nurse.employmentType;
+  this.workLocationZipCode = nurse.workLocationZipCode;
+  this.workLocationCityname = nurse.workLocationCityname;
+
 };
 Nurse.create = (newNurse, result)=>{
   dbConn.query("INSERT INTO nurses set ?", newNurse, (err, res)=>{

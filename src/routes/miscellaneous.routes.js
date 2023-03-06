@@ -11,4 +11,5 @@ router.get('/licenses', miscellaneousController.getLicenses);
 router.get('/shifts', miscellaneousController.getShifts);
 router.get('/travel-experience', miscellaneousController.getTravelExperiences);
 router.get('/hear-about-us', miscellaneousController.getHearAboutUs);
+router.get('/passed-options', miscellaneousController.getPassedOptions);
 module.exports = router

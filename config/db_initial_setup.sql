@@ -363,4 +363,14 @@ INSERT INTO `gabay_db`.`hearAboutUs` (`name`) VALUES
 ('Social Media'),
 ('Search Engine'),
 ('Friend');
+
+CREATE TABLE IF NOT EXISTS `passedOptions` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `gabay_db`.`passedOptions` (`name`) VALUES 
+('Yes'),
+('No'),
+('Pending (already applied)');
 commit;
