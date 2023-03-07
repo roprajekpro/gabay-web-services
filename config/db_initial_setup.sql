@@ -1,6 +1,13 @@
 CREATE DATABASE gabay_db;
 use gabay_db;
 
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `email` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
 CREATE TABLE IF NOT EXISTS `nurses` (
   `id` BIGINT UNSIGNED AUTO_INCREMENT,
   `firstName` VARCHAR(255) NOT NULL,
@@ -12,15 +19,36 @@ CREATE TABLE IF NOT EXISTS `nurses` (
   `country` VARCHAR(255) NOT NULL,
   `stateProvince` VARCHAR(255) NOT NULL,
   `city` VARCHAR(100) NOT NULL,
-  `zipcode` INT,
+  `zipcode` VARCHAR(100) NOT NULL,
   `is_deleted` TINYINT UNSIGNED DEFAULT 0,
-  `created_at` DATETIME NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
   `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `educationLevel` TINYINT NOT NULL,
+  `countryOfEducation` TINYINT NOT NULL,
+  `certifications` TINYINT NOT NULL,
+  `profession` TINYINT NOT NULL,
+  `speciality` TINYINT NOT NULL,
+  `employmentType` TINYINT NOT NULL,
+  `workLocationZipCode` VARCHAR(255) NOT NULL,
+  `workLocationCityname` VARCHAR(255) NOT NULL,
+  `licenses` TINYINT NOT NULL,
+  `shiftPreference` TINYINT NOT NULL,
+  `travelExperience` TINYINT NOT NULL,
+  `nClexrnExam` BOOLEAN NOT NULL,
+  `visaScreenCertificate` TINYINT NOT NULL,
+  `ielts` TINYINT NOT NULL,
+  `ieltsExpirationDate` VARCHAR(255) NOT NULL,
+  `foreignEducatedNursesCourse` BOOLEAN NOT NULL,
+  `socialSecuritNumber` BOOLEAN NOT NULL,
+  `itin` BOOLEAN NOT NULL,
+  `eb3` BOOLEAN NOT NULL,
+  `hearAboutUs` TINYINT NOT NULL,
+  `friendName` VARCHAR(255) NOT NULL,
+  `familyMemberRelation` VARCHAR(255) NOT NULL,
+  `familyMemberName` VARCHAR(255) NOT NULL,
+  `recruitingAgent` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
-
-INSERT INTO `gabay_db`.`nurses` (`firstName`, `lastName`, `phone`, `email`, `title`, `address`, `country`, `stateProvince`, `city`, `zipcode`, `is_deleted`, `created_at`) VALUES ('John', 'Doe', '1234567890', 'johndoe@gmail.com', 'Mr', 'BR Softech Pvt Ltd', 'India', 'Maharashtra', 'Pune' , '440028', '0', '2019-11-19 03:30:30');
-INSERT INTO `gabay_db`.`nurses` (`firstName`, `lastName`, `phone`, `email`, `title`, `address`, `country`, `stateProvince`, `city`, `zipcode`, `is_deleted`, `created_at`) VALUES ('Jane', 'Doe', '9876543210', 'janedoe@gmail.com', 'Mrs', 'RG Infotech ', 'India', 'Goa', 'Panjim', '402342', '0', '2019-11-19 03:35:30');
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root@Mysql0409';
 flush privileges;

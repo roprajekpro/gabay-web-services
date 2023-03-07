@@ -21,9 +21,11 @@ app.get('/', (req, res) => {
 // application routes
 const miscellaneousRoutes = require('./src/routes/miscellaneous.routes')
 const nurseRoutes = require('./src/routes/nurse.routes')
+const usersRoutes = require('./src/routes/users.routes')
 // middlewares
 app.use('/api/v1/miscellaneous', miscellaneousRoutes)
 app.use('/api/v1/nurses', nurseRoutes)
+app.use('/api/v1/users', usersRoutes)
 // listen for requests
 app.listen(port, () => {
   console.log(`Server up and running on port: ${port}`);
